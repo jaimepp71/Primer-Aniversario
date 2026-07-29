@@ -86,7 +86,7 @@ export default function LoginScreen({ onLoginSuccess }) {
         {/* Right Side: Couple Photo Hero */}
         <div className="login-sales-right">
           <img
-            src="/couple-photo.jpg"
+            src="./couple-photo.jpg"
             alt="Foto de Pareja"
             className="sales-couple-photo"
             onError={(e) => {
