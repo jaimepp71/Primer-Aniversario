@@ -1411,3 +1411,234 @@ body {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+/* ==========================================================================
+   MOBILE & IPHONE (11 / iOS SAFARI) OPTIMIZATIONS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Prevent iOS automatic zoom on form inputs */
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Instant touch feedback without grey highlight or delay */
+  button,
+  .murdoku-suspect-card,
+  .murdoku-grid-cell,
+  .tool-btn,
+  .submit-case-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Main Container */
+  .app-container {
+    padding: 0.5rem 0.4rem;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  /* Stack Main Layout Vertically */
+  .murdoku-main-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* 1. Left Panel (Regalos): Horizontal 3-column Grid on Mobile */
+  .murdoku-left-panel {
+    width: 100%;
+    padding: 0.45rem 0.4rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .suspects-header {
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .suspects-header h3 {
+    font-size: 0.88rem;
+  }
+
+  .suspects-header p {
+    display: none; /* Hide subtitle on mobile for vertical space */
+  }
+
+  .murdoku-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+
+  .murdoku-suspect-card {
+    padding: 0.3rem 0.25rem;
+    gap: 0.15rem;
+  }
+
+  .suspect-avatar-box {
+    height: 38px;
+  }
+
+  .avatar-emoji {
+    font-size: 1.5rem;
+  }
+
+  .suspect-name-bar {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.2rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .suspect-clue-box {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.3rem;
+    line-height: 1.25;
+  }
+
+  /* 2. Center Panel (Apartment Floorplan) */
+  .murdoku-center-panel {
+    width: 100%;
+    padding: 0.4rem 0.35rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .floorplan-header {
+    padding-bottom: 0.15rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .floorplan-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .murdoku-grid-map-frame {
+    width: 100%;
+    max-width: min(94vw, 420px);
+    aspect-ratio: 1 / 1;
+    border-width: 4px;
+  }
+
+  .elimination-cross-box .cross-symbol {
+    font-size: 3.5rem;
+  }
+
+  .murdoku-room-title-banner {
+    font-size: 0.58rem;
+    padding: 0px 4px;
+    bottom: -9px;
+  }
+
+  /* 3. Right Panel (Tools & Submit): Horizontal Action Bar on Mobile */
+  .murdoku-right-panel {
+    width: 100%;
+    padding: 0.45rem 0.4rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tools-title {
+    display: none; /* Hide title text on mobile to save height */
+  }
+
+  .tools-buttons-group {
+    flex-direction: row;
+    width: 48%;
+    gap: 0.35rem;
+  }
+
+  .tool-btn {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.55rem 0.3rem;
+    font-size: 0.78rem;
+    gap: 0.3rem;
+  }
+
+  .submit-section {
+    width: 48%;
+    gap: 0.15rem;
+  }
+
+  .submit-case-btn {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.55rem 0.3rem;
+    font-size: 0.82rem;
+    gap: 0.3rem;
+  }
+
+  .submit-counter {
+    font-size: 0.68rem;
+  }
+
+  /* Login Screen Mobile Adjustments */
+  .login-full-wrapper {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .login-sales-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .login-sales-left {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 1.75rem 1.25rem;
+    box-shadow: none;
+    border-right: none;
+    border-bottom: 1.5px solid var(--border-light);
+  }
+
+  .sales-welcome-title {
+    font-size: 1.7rem;
+  }
+
+  .sales-welcome-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .login-sales-right {
+    width: 100%;
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .sales-couple-photo {
+    position: relative;
+    height: 100%;
+  }
+
+  /* Instructions Screen Mobile Adjustments */
+  .instructions-full-wrapper {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .instructions-standalone-card {
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .sales-instructions-grid-2x2 {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+}
