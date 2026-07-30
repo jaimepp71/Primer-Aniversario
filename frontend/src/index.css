@@ -1339,12 +1339,28 @@ body {
   animation: modalFadeIn 0.35s ease forwards;
 }
 
-/* 2x2 Grid Layout for 4 Instructions */
-.sales-instructions-grid-2x2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.15rem;
+.instructions-title {
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.instructions-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 640px;
+}
+
+.instructions-continue-btn {
   width: 100%;
+  max-width: 420px;
+  margin: 1.5rem auto 0 auto;
 }
 
 @media (max-width: 720px) {
@@ -1367,13 +1383,17 @@ body {
 
 .instructions-full-wrapper {
   background-color: var(--bg-main);
-  height: 100vh;
-  max-height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  height: auto;
+  max-height: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
 }
 
 .centered-step-card {
@@ -1629,16 +1649,51 @@ body {
     height: auto;
     min-height: 100vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 1rem 0.5rem;
+    align-items: flex-start;
   }
 
   .instructions-standalone-card {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 0.85rem;
     border-radius: var(--radius-md);
+    margin: 0.5rem auto 1.5rem auto;
   }
 
   .sales-instructions-grid-2x2 {
     grid-template-columns: 1fr;
-    gap: 0.65rem;
+    gap: 0.5rem;
+  }
+
+  .centered-step-card {
+    padding: 0.65rem 0.75rem;
+    gap: 0.3rem;
+  }
+
+  .centered-step-text h3 {
+    font-size: 0.88rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .centered-step-text p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .instructions-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .instructions-subtitle {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .instructions-continue-btn {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    padding: 0.85rem;
   }
 }
