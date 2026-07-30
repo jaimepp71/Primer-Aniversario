@@ -3,11 +3,11 @@ export const VALID_LOGIN_DATES = ['22/05/2025', '01/08/2025'];
 
 // 5 Apartment Locations (Columns)
 export const LOCATIONS = [
-  { id: 'sofa', name: 'Salón / Sofá', icon: '🛋️', label: 'Salón / Sofá 🛋️', lat: 40.4168, lng: -3.7038 },
-  { id: 'bano', name: 'Baño / Aseo', icon: '🛁', label: 'Baño / Aseo 🛁', lat: 40.4175, lng: -3.7030 },
-  { id: 'cocina', name: 'Zona Cocina / Cafetera', icon: '☕', label: 'Zona Cocina / Cafetera ☕', lat: 40.4182, lng: -3.7045 },
-  { id: 'balcon', name: 'Balcón / Terraza', icon: '🌿', label: 'Balcón / Terraza 🌿', lat: 40.4190, lng: -3.7035 },
-  { id: 'noche', name: 'Dormitorio / Noche', icon: '🛏️', label: 'Dormitorio / Noche 🛏️', lat: 40.4160, lng: -3.7025 }
+  { id: 'sofa', name: 'Salón', icon: '🛋️', label: 'Salón', lat: 40.4168, lng: -3.7038 },
+  { id: 'bano', name: 'Baño', icon: '🛁', label: 'Baño', lat: 40.4175, lng: -3.7030 },
+  { id: 'cocina', name: 'Cocina', icon: '☕', label: 'Zona Cocina / Cafetera ☕', lat: 40.4182, lng: -3.7045 },
+  { id: 'balcon', name: 'Terraza', icon: '🌿', label: 'Terraza', lat: 40.4190, lng: -3.7035 },
+  { id: 'noche', name: 'Dormitorio', icon: '🛏️', label: 'Dormitorio', lat: 40.4160, lng: -3.7025 }
 ];
 
 // 3 Masked Gifts (Rows)
